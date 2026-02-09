@@ -1,14 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-02-09T11:41:25.685038816+00:00",
+  "updated_at": "2026-02-09T21:27:41.636220264+00:00",
   "keys": [
     {
-      "fingerprint": "974e12306e9612521843eaf1648662d33c1f1cb2d66e8fa14e82f30addd30b81",
-      "public_key": "aede601702a944ef8ed5c4023e5cb9b74913fc972491353ce58f1e0f2a450033",
-      "created_at": "2026-02-09T11:41:25.685038816+00:00",
-      "version": 1,
-      "label": "Victor primary signing key (TEST)",
-      "revocation": null
+      "fingerprint": "7b90c5fa0b71d176b260925838dfbed49430e996b418436b5cd5f6fe13bab359",
+      "public_key": "28f8a3c1f2fe3398159e81c80908611d15f3b4f87be2e5127ba80814576a73b0",
+      "created_at": "2026-02-09T21:27:41.636218286+00:00",
+      "status": "active",
+      "label": "Primary signing key (TEST)"
     }
   ]
 }
