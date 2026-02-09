@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-02-09T21:27:41.636220264+00:00",
+  "updated_at": "2026-02-09T21:37:36.698206580+00:00",
   "keys": [
     {
-      "fingerprint": "7b90c5fa0b71d176b260925838dfbed49430e996b418436b5cd5f6fe13bab359",
-      "public_key": "28f8a3c1f2fe3398159e81c80908611d15f3b4f87be2e5127ba80814576a73b0",
-      "created_at": "2026-02-09T21:27:41.636218286+00:00",
+      "fingerprint": "ca541241110b749f2b3c08560590212622db480af56c614bef9f1194e8bc3770",
+      "public_key": "315f9b8d90d9fe3a595ba771d6092a1ea9d93b22f18823f8dfbda1be9f73aa62",
+      "created_at": "2026-02-09T21:37:36.698204791+00:00",
       "status": "active",
-      "label": "Primary signing key (TEST)"
+      "label": "Primary signing key"
     }
   ]
 }
