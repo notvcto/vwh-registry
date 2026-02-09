@@ -1,7 +1,6 @@
 <html>
   <head>
     <title>File Index</title>
-
     <style>
       @font-face {
         font-family: "JetBrains Mono";
@@ -19,36 +18,66 @@
         background-color: #121212;
         color: #e0e0e0;
         font-family: "JetBrains Mono", monospace;
-        font-size: 18px;
+        font-size: 16px;
         margin: 20px;
       }
 
-      h2 {
+      h2,
+      h3 {
         color: #bb86fc;
       }
 
-      ul {
-        list-style-type: none;
-        padding: 0;
+      .file-header,
+      .file-item {
+        display: flex;
+        padding: 5px 0;
+        border-bottom: 1px solid #333;
       }
 
-      li a {
+      .file-header {
+        font-weight: bold;
+        border-bottom: 2px solid #555;
+      }
+
+      .file-header > div,
+      .file-item > div {
+        flex: 1;
+        padding: 0 10px;
+      }
+
+      .file-name {
+        flex: 3;
+      }
+      .file-size {
+        flex: 1;
+        text-align: right;
+      }
+      .file-date {
+        flex: 1;
+        text-align: right;
+      }
+
+      .file-item a {
         color: #03dac6;
         text-decoration: none;
-        padding: 5px 0;
         display: block;
-        transition: color 0.3s;
       }
 
-      li a:hover {
-        color: #ffffff;
+      .file-item a:hover {
         text-decoration: underline;
       }
     </style>
   </head>
   <body>
-    <h2>Index of Files</h2>
-    <ul id="file-list"></ul>
+    <h3>Index of /vwh-registry/</h3>
+
+    <div class="file-header">
+      <div class="file-name">Filename</div>
+      <div class="file-size">File Size</div>
+      <div class="file-date"></div>
+    </div>
+
+    <div id="file-list"></div>
 
     <script>
       (async () => {
@@ -59,7 +88,16 @@
         let htmlString = "";
         for (const file of data) {
           if (file.name.endsWith(".json")) {
-            htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
+            htmlString += `
+              <div class="file-item">
+                <div class="file-name">
+                  <!-- Emoji added directly into the link text -->
+                  <a href="${file.path}">📄 ${file.name}</a>
+                </div>
+                <div class="file-size">${file.size} bytes</div>
+                <div class="file-date"></div>
+              </div>
+            `;
           }
         }
         document.getElementById("file-list").innerHTML = htmlString;
