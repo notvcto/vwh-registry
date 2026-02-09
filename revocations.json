@@ -1,6 +1,14 @@
 {
   "version": 1,
-  "updated_at": "2026-02-09T21:34:50.647928500+00:00",
+  "updated_at": "2026-02-09T21:42:37.007234739+00:00",
   "key_revocations": [],
-  "artifact_revocations": []
+  "artifact_revocations": [
+    {
+      "artifact_id": "8fdc3a0538029cf369bd13a88b59de19",
+      "revoked_at": "2026-02-09T21:42:37.007230891+00:00",
+      "reason": "testing",
+      "key_fingerprint": "ca541241110b749f2b3c08560590212622db480af56c614bef9f1194e8bc3770",
+      "note": null
+    }
+  ]
 }
