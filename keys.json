@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-02-10T17:13:00.305667920+00:00",
-  "artifacts": [
+  "updated_at": "2026-02-10T17:11:47.012131053+00:00",
+  "keys": [
     {
-      "id": "9ef0d850dfae3d71c03b6accc9aca04a",
       "fingerprint": "bfc718ab0252f865c31a81856a6d5b129ceec6cdc777c476edbccc1b4d6edc84",
+      "public_key": "77162a3223a49f9a14f1f226fe9358928b8d4438a88629d125c765281f1f1f19",
+      "created_at": "2026-02-10T17:11:47.012127665+00:00",
       "status": "active",
-      "revoked_at": null,
-      "reason": null
+      "label": "Key: key-20260210-171133"
     }
   ]
 }
