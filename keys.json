@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-02-10T17:11:47.012131053+00:00",
+  "updated_at": "2026-02-10T17:28:17.314822021+00:00",
   "keys": [
     {
-      "fingerprint": "bfc718ab0252f865c31a81856a6d5b129ceec6cdc777c476edbccc1b4d6edc84",
-      "public_key": "77162a3223a49f9a14f1f226fe9358928b8d4438a88629d125c765281f1f1f19",
-      "created_at": "2026-02-10T17:11:47.012127665+00:00",
+      "fingerprint": "790c634dfd17257099b3a4c9ede569cbcdf274aa34a8cad619a9a2c35ea6e142",
+      "public_key": "90a823677137aa4eb8b46b32b7fae16d193aff938da75a5144a4aa3c6e18d127",
+      "created_at": "2026-02-10T17:28:17.314818463+00:00",
       "status": "active",
-      "label": "Key: key-20260210-171133"
+      "label": "⚠ PUBLIC DEMO KEY (UNTRUSTED) ⚠"
     }
   ]
 }
