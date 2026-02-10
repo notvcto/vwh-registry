@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-02-09T21:37:36.698206580+00:00",
-  "keys": [
+  "updated_at": "2026-02-10T17:13:00.305667920+00:00",
+  "artifacts": [
     {
-      "fingerprint": "ca541241110b749f2b3c08560590212622db480af56c614bef9f1194e8bc3770",
-      "public_key": "315f9b8d90d9fe3a595ba771d6092a1ea9d93b22f18823f8dfbda1be9f73aa62",
-      "created_at": "2026-02-09T21:37:36.698204791+00:00",
+      "id": "9ef0d850dfae3d71c03b6accc9aca04a",
+      "fingerprint": "bfc718ab0252f865c31a81856a6d5b129ceec6cdc777c476edbccc1b4d6edc84",
       "status": "active",
-      "label": "Primary signing key"
+      "revoked_at": null,
+      "reason": null
     }
   ]
 }
