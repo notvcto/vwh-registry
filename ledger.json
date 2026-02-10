@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "updated_at": "2026-02-10T17:13:00.305667920+00:00",
+  "artifacts": [
+    {
+      "id": "9ef0d850dfae3d71c03b6accc9aca04a",
+      "fingerprint": "bfc718ab0252f865c31a81856a6d5b129ceec6cdc777c476edbccc1b4d6edc84",
+      "status": "active",
+      "revoked_at": null,
+      "reason": null
+    }
+  ]
+}
