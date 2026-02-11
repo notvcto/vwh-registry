@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "updated_at": "...",
+  "keys": [
+    {
+      "fingerprint": "...",
+      "public_key": "...",
+      "created_at": "...",
+      "type": "signing",
+      "status": "active",
+      "label": "..."
+    },
+    {
+      "fingerprint": "...",
+      "public_key": "...",
+      "created_at": "...",
+      "type": "sealing",
+      "status": "active",
+      "label": "..."
+    }
+  ]
+}
