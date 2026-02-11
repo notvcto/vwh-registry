@@ -1,5 +1,13 @@
 {
   "version": 2,
   "updated_at": "...",
-  "artifacts": []
+  "artifacts": [
+    {
+      "id": "artifact_id",
+      "fingerprint": "author_fingerprint",
+      "status": "active|revoked",
+      "revoked_at": "...",
+      "reason": "..."
+    }
+  ]
 }
