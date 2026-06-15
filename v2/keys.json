@@ -1,22 +1,24 @@
 {
   "version": 2,
-  "updated_at": "...",
+  "updated_at": "2026-06-15T21:15:53.332796817+00:00",
   "keys": [
     {
-      "fingerprint": "...",
-      "public_key": "...",
-      "created_at": "...",
+      "fingerprint": "d42c5b43d040749c5147b9ead70a1497dcccd1267cb2c47e2eeaf815ae5aac40",
+      "public_key": "c043ce6b9a8f6d4c44bb4198b92261e1a6062e6d925fe3430f1bcdbcbd07dc1c",
+      "created_at": "2026-06-15T21:13:59.090391727+00:00",
       "type": "signing",
       "status": "active",
-      "label": "..."
+      "label": "demo signing key",
+      "is_demo": true
     },
     {
-      "fingerprint": "...",
-      "public_key": "...",
-      "created_at": "...",
+      "fingerprint": "5ae917a04a1f2d2d0bdb98688ed9d7c703c640278ac29fa4d6057693d4e761c3",
+      "public_key": "d7e15d78527d085a4061867f933a8be56f0daa9d8e9431f8127a0efcba0d702a",
+      "created_at": "2026-06-15T21:15:53.332795907+00:00",
       "type": "sealing",
       "status": "active",
-      "label": "..."
+      "label": "demo sealing key",
+      "is_demo": true
     }
   ]
 }
