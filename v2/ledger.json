@@ -1,13 +1,13 @@
 {
-  "version": 2,
-  "updated_at": "...",
+  "version": 1,
+  "updated_at": "2026-06-15T22:05:02.898041142+00:00",
   "artifacts": [
     {
-      "id": "artifact_id",
-      "fingerprint": "author_fingerprint",
-      "status": "active|revoked",
-      "revoked_at": "...",
-      "reason": "..."
+      "id": "3203d5c589faad1cfd39179fea87d70c",
+      "fingerprint": "d42c5b43d040749c5147b9ead70a1497dcccd1267cb2c47e2eeaf815ae5aac40",
+      "status": "active",
+      "revoked_at": null,
+      "reason": null
     }
   ]
 }
