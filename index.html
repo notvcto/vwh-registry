@@ -1,107 +1,123 @@
-<html>
-  <head>
-    <title>File Index</title>
-    <style>
-      @font-face {
-        font-family: "JetBrains Mono";
-        src:
-          url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2")
-            format("woff2"),
-          url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff")
-            format("woff");
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-      }
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      body {
-        background-color: #121212;
-        color: #e0e0e0;
-        font-family: "JetBrains Mono", monospace;
-        font-size: 16px;
-        margin: 20px;
-      }
+  <!-- ── VWH registry descriptor — read by `vwh inspect` ───────────── -->
+  <meta name="vwh-registry"      content="v2">
+  <meta name="vwh-registry-repo" content="notvcto/vwh-registry">
+  <meta name="vwh-registry-url"  content="https://notvc.to/vwh-registry">
+  <!-- ──────────────────────────────────────────────────────────────── -->
 
-      h2,
-      h3 {
-        color: #bb86fc;
-      }
+  <title>VWH Registry — notvcto</title>
+  <style>
+    :root {
+      --bg:      #0c0d10;
+      --fg:      #ededf0;
+      --muted:   #74767f;
+      --hair:    #1f2128;
+      --accent:  #8ab4d8;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+    }
+    main { width: 100%; max-width: 30rem; text-align: center; }
 
-      .file-header,
-      .file-item {
-        display: flex;
-        padding: 5px 0;
-        border-bottom: 1px solid #333;
-      }
+    .eyebrow {
+      font: 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2.25rem;
+    }
+    h1 {
+      font-size: 1.55rem;
+      font-weight: 560;
+      letter-spacing: -.01em;
+      margin: 0 0 1.75rem;
+    }
+    .repo {
+      display: inline-block;
+      font: 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: var(--fg);
+      text-decoration: none;
+      padding: .5rem .8rem;
+      border: 1px solid var(--hair);
+      border-radius: 7px;
+      transition: border-color .15s ease;
+    }
+    .repo:hover { border-color: var(--accent); }
+    .repo .at { color: var(--muted); }
 
-      .file-header {
-        font-weight: bold;
-        border-bottom: 2px solid #555;
-      }
+    .rule {
+      width: 2.5rem;
+      height: 1px;
+      background: var(--hair);
+      margin: 2.5rem auto;
+      border: 0;
+    }
 
-      .file-header > div,
-      .file-item > div {
-        flex: 1;
-        padding: 0 10px;
-      }
+    .data { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 2.25rem; }
+    .data a {
+      font: 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color .15s ease;
+    }
+    .data a:hover { color: var(--accent); }
 
-      .file-name {
-        flex: 3;
-      }
-      .file-size {
-        flex: 1;
-        text-align: right;
-      }
-      .file-date {
-        flex: 1;
-        text-align: right;
-      }
+    .verify {
+      font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: var(--muted);
+      margin-bottom: 3rem;
+    }
+    .verify b { color: var(--fg); font-weight: 500; }
 
-      .file-item a {
-        color: #03dac6;
-        text-decoration: none;
-        display: block;
-      }
+    footer {
+      font-size: 12.5px;
+      line-height: 1.55;
+      color: var(--muted);
+      max-width: 24rem;
+      margin: 0 auto;
+    }
+    footer a { color: var(--muted); text-underline-offset: 2px; }
+    footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">vwh &middot; registry</div>
 
-      .file-item a:hover {
-        text-decoration: underline;
-      }
-    </style>
-  </head>
-  <body>
-    <h3>Index of /vwh-registry/</h3>
+    <h1>Cryptographic presence,<br>publicly anchored.</h1>
 
-    <div class="file-header">
-      <div class="file-name">Filename</div>
-      <div class="file-size">File Size</div>
-      <div class="file-date"></div>
-    </div>
+    <a class="repo" href="https://github.com/notvcto/vwh-registry">
+      notvcto<span class="at">/</span>vwh-registry
+    </a>
 
-    <div id="file-list"></div>
+    <hr class="rule">
 
-    <script>
-      (async () => {
-        const response = await fetch(
-          `https://api.github.com/repos/notvcto/vwh-registry/contents/`,
-        );
-        const data = await response.json();
-        let htmlString = "";
-        for (const file of data) {
-          if (file.name.endsWith(".json")) {
-            htmlString += `
-              <div class="file-item">
-                <div class="file-name">
-                  <!-- Emoji added directly into the link text -->
-                  <a href="${file.path}">📄 ${file.name}</a>
-                </div>
-                <div class="file-size">${file.size} bytes</div>
-                <div class="file-date"></div>
-              </div>
-            `;
-          }
-        }
-        document.getElementById("file-list").innerHTML = htmlString;
-      })();
-    </script>
-  </body>
+    <nav class="data">
+      <a href="v2/keys.json">keys.json</a>
+      <a href="v2/ledger.json">ledger.json</a>
+    </nav>
+
+    <div class="verify"><b>vwh inspect</b> &lt;artifact&gt;</div>
+
+    <footer>
+      A <a href="https://github.com/notvcto/vwh">VWH</a> key &amp; artifact registry.
+      Signatures are verified locally and prove key possession, not identity.
+      Registry data is advisory.
+    </footer>
+  </main>
+</body>
 </html>
